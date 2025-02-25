@@ -1,0 +1,44 @@
+{
+  "name": "text-doris",
+  "version": "1.0.0",
+  "description": "A web application that uses Twilio API",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git checkout -b deploy && webpack && git add -f public/bundle.js public/bundle.js.map && git commit -m 'Deploying' && git push heroku deploy:master",
+    "start": "node server",
+    "start-dev": "webpack && nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorcheng/textDoris.git"
+  },
+  "author": "Doris Cheng (dorcheng@umich.edu)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorcheng/textDoris/issues"
+  },
+  "homepage": "https://github.com/dorcheng/textDoris#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sequelize": "^4.37.6",
+    "twilio": "^3.15.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.3",
+    "webpack": "^3.5.3",
+    "webpack-cli": "^2.0.15"
+  }
+}
